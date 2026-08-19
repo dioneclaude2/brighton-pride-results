@@ -460,11 +460,12 @@
 <script>
   (function(){
     var queue = [];
-    var processing = false;
+    var inFlight = 0;
+    var MAX_CONCURRENT = 3;
 
     function loadNext(){
-      if(processing || queue.length === 0) return;
-      processing = true;
+      if(inFlight >= MAX_CONCURRENT || queue.length === 0) return;
+      inFlight++;
       var el = queue.shift();
       var url = el.getAttribute('data-embed-url');
       var loading = el.querySelector('.thumb-loading');
@@ -485,7 +486,8 @@
         }
       }
       tryProcess(10);
-      setTimeout(function(){ processing = false; loadNext(); }, 350);
+      setTimeout(function(){ inFlight--; loadNext(); }, 150);
+      loadNext();
     }
 
     var observer = new IntersectionObserver(function(entries){
@@ -496,7 +498,7 @@
           loadNext();
         }
       });
-    }, {rootMargin: '500px 0px'});
+    }, {rootMargin: '1500px 0px'});
 
     document.querySelectorAll('.lazy-embed').forEach(function(el){
       observer.observe(el);
