@@ -93,6 +93,9 @@
   .badge{font-family:var(--mono);font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;margin-left:8px;}
   .badge.boosted{background:#ffe3ef;color:var(--pink);}
   .badge.organic{background:#e4f3ea;color:var(--good);}
+  .badge.matched{background:#e4f3ea;color:var(--good);}
+  .badge.tentative{background:#fdf0dc;color:var(--warn);}
+  .badge.unmatched{background:#fbe2e5;color:var(--bad);}
   .note{font-size:12px;color:var(--muted);font-style:italic;margin-top:4px;}
 
   .embed-wrap{margin-top:12px;display:flex;justify-content:center;}
@@ -102,9 +105,10 @@
   .thumb iframe{margin-top:0 !important;pointer-events:none;}
   .thumb-link{position:absolute;inset:0;z-index:5;cursor:pointer;}
 
-  .status-matched{color:var(--good);font-weight:600;}
-  .status-tentative{color:var(--warn);font-weight:600;}
-  .status-unmatched{color:var(--bad);font-weight:600;}
+  .benchmarks{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:14px;}
+  .benchmarks .b{border:1px solid var(--line);border-radius:10px;padding:14px;}
+  .benchmarks .b .n{font-size:20px;font-weight:800;letter-spacing:-.02em;color:var(--text);}
+  .benchmarks .b .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
 
   .bottomline{font-size:14.5px;line-height:1.7;}
 
@@ -373,21 +377,37 @@
 
       <div style="overflow-x:auto;">
       <table>
-        <tr><th>Ad name</th><th class="num">Ad views</th><th class="num">Spend</th><th>Matched post</th><th>Basis</th></tr>
-        <tr><td>Did you get lucky and get a lem, avo or berri at Brighton Pride?</td><td class="num">255</td><td class="num">HK$13.27</td><td class="status-matched">Content Forge – DbgbVaUMbOR</td><td>Exact caption match</td></tr>
-        <tr><td>Brighton Pride is full of BEAUTY!</td><td class="num">1,909</td><td class="num">HK$107.34</td><td class="status-matched">Content Forge – Dbgjf6GExxl</td><td>Exact caption match</td></tr>
-        <tr><td>Spreading the love at Brighton Pride</td><td class="num">1,422</td><td class="num">HK$77.95</td><td class="status-matched">Content Forge – Dbf5M9fjHyG</td><td>Caption starts with exact phrase</td></tr>
-        <tr><td>the women who are still learning to be comfortable</td><td class="num">159,984</td><td class="num">HK$7,940.51</td><td class="status-matched">Lauren's Team – DbgJa8jDM1P</td><td>Exact caption match</td></tr>
-        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 1 of 2)</span></td><td class="num">193</td><td class="num">HK$7.94</td><td class="status-tentative">Lauren's Team – DbgHLVGjTMr (tentative)</td><td>Duplicate ad name — could not confirm which line item(s) apply. Flagged, not assumed.</td></tr>
-        <tr><td>free v!br4tors at Pride because pleasure belongs to every body</td><td class="num">8,547</td><td class="num">HK$425.58</td><td class="status-matched">Lauren's Team – DbgIUudEdJP</td><td>Exact caption match</td></tr>
-        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 2 of 2)</span></td><td class="num">277,707</td><td class="num">HK$13,750.87</td><td class="status-tentative">Lauren's Team – DbgHLVGjTMr (tentative)</td><td>Same duplicate-name issue — likely a 2nd line item for the same post, not confirmed</td></tr>
-        <tr><td>Weather forecast for Brighton Pride</td><td class="num">73,661</td><td class="num">HK$2,748.09</td><td class="status-unmatched">No match found</td><td>No post in any team's link list has this caption</td></tr>
-        <tr><td>More color, more laughter, more freedom, more pleasure</td><td class="num">75</td><td class="num">HK$6.40</td><td class="status-unmatched">No match found</td><td>No post in any team's link list has this caption</td></tr>
-        <tr><td>45+ women don't need permission.</td><td class="num">283,160</td><td class="num">HK$11,571.95</td><td class="status-matched">Lauren's Team – DbnjLF8DXPI</td><td>Exact caption match</td></tr>
-        <tr><td>the fight for pleasure and the fight for pride</td><td class="num">463</td><td class="num">HK$20.00</td><td class="status-matched">Lauren's Team – Dbp-7H6DWgD</td><td>Exact caption match</td></tr>
-        <tr><td>the same courage it takes to walk in a pride parade</td><td class="num">412</td><td class="num">HK$17.49</td><td class="status-matched">Lauren's Team – DbqFyeyDqru</td><td>Exact caption match</td></tr>
-        <tr class="total"><td>TOTAL</td><td class="num">807,788</td><td class="num">HK$36,687.39</td><td></td><td></td></tr>
+        <tr><th>Ad name</th><th class="num">Ad views</th><th class="num">Spend</th><th class="num">CPM</th><th>Matched post</th><th>Basis</th></tr>
+        <tr><td>Did you get lucky and get a lem, avo or berri at Brighton Pride?</td><td class="num">255</td><td class="num">HK$13.27</td><td class="num">HK$52.04</td><td><span class="badge matched">Matched</span> Content Forge – DbgbVaUMbOR</td><td>Exact caption match</td></tr>
+        <tr><td>Brighton Pride is full of BEAUTY!</td><td class="num">1,909</td><td class="num">HK$107.34</td><td class="num">HK$56.23</td><td><span class="badge matched">Matched</span> Content Forge – Dbgjf6GExxl</td><td>Exact caption match</td></tr>
+        <tr><td>Spreading the love at Brighton Pride</td><td class="num">1,422</td><td class="num">HK$77.95</td><td class="num">HK$54.82</td><td><span class="badge matched">Matched</span> Content Forge – Dbf5M9fjHyG</td><td>Caption starts with exact phrase</td></tr>
+        <tr><td>the women who are still learning to be comfortable</td><td class="num">159,984</td><td class="num">HK$7,940.51</td><td class="num">HK$49.63</td><td><span class="badge matched">Matched</span> Lauren's Team – DbgJa8jDM1P</td><td>Exact caption match</td></tr>
+        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 1 of 2)</span></td><td class="num">193</td><td class="num">HK$7.94</td><td class="num">HK$41.14</td><td><span class="badge tentative">Tentative</span> Lauren's Team – DbgHLVGjTMr</td><td>Duplicate ad name — could not confirm which line item(s) apply. Flagged, not assumed.</td></tr>
+        <tr><td>free v!br4tors at Pride because pleasure belongs to every body</td><td class="num">8,547</td><td class="num">HK$425.58</td><td class="num">HK$49.79</td><td><span class="badge matched">Matched</span> Lauren's Team – DbgIUudEdJP</td><td>Exact caption match</td></tr>
+        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 2 of 2)</span></td><td class="num">277,707</td><td class="num">HK$13,750.87</td><td class="num">HK$49.52</td><td><span class="badge tentative">Tentative</span> Lauren's Team – DbgHLVGjTMr</td><td>Same duplicate-name issue — likely a 2nd line item for the same post, not confirmed</td></tr>
+        <tr><td>Weather forecast for Brighton Pride</td><td class="num">73,661</td><td class="num">HK$2,748.09</td><td class="num">HK$37.31</td><td><span class="badge unmatched">Unmatched</span> No match found</td><td>No post in any team's link list has this caption</td></tr>
+        <tr><td>More color, more laughter, more freedom, more pleasure</td><td class="num">75</td><td class="num">HK$6.40</td><td class="num">HK$85.33</td><td><span class="badge unmatched">Unmatched</span> No match found</td><td>No post in any team's link list has this caption</td></tr>
+        <tr><td>45+ women don't need permission.</td><td class="num">283,160</td><td class="num">HK$11,571.95</td><td class="num">HK$40.87</td><td><span class="badge matched">Matched</span> Lauren's Team – DbnjLF8DXPI</td><td>Exact caption match</td></tr>
+        <tr><td>the fight for pleasure and the fight for pride</td><td class="num">463</td><td class="num">HK$20.00</td><td class="num">HK$43.20</td><td><span class="badge matched">Matched</span> Lauren's Team – Dbp-7H6DWgD</td><td>Exact caption match</td></tr>
+        <tr><td>the same courage it takes to walk in a pride parade</td><td class="num">412</td><td class="num">HK$17.49</td><td class="num">HK$42.45</td><td><span class="badge matched">Matched</span> Lauren's Team – DbqFyeyDqru</td><td>Exact caption match</td></tr>
+        <tr class="total"><td>TOTAL</td><td class="num">807,788</td><td class="num">HK$36,687.39</td><td class="num">HK$45.42</td><td></td><td></td></tr>
       </table>
+      </div>
+      <p class="desc" style="margin:12px 0 0;">CPM = spend ÷ ad views × 1,000. Range across all 12 ads: HK$37.31 – HK$85.33. Blended CPM (total spend ÷ total ad views): HK$45.42.</p>
+    </div>
+  </section>
+
+  <!-- BENCHMARKS -->
+  <section>
+    <div class="card">
+      <span class="tag">Benchmarks</span>
+      <h2>Rates to plan against</h2>
+      <p class="desc">Cost-efficiency figures for comparing against future campaigns.</p>
+      <div class="benchmarks">
+        <div class="b"><div class="n">HK$45.42</div><div class="l">Blended CPM</div></div>
+        <div class="b"><div class="n">HK$37–85</div><div class="l">CPM range, 12 ads</div></div>
+        <div class="b"><div class="n">HK$53.63</div><div class="l">Ad spend / 1,000 organic views</div></div>
+        <div class="b"><div class="n">34,205</div><div class="l">Avg views per post</div></div>
       </div>
     </div>
   </section>
