@@ -51,13 +51,17 @@
   .hero .sub{font-size:14px;color:var(--cream-dim);max-width:640px;}
   .hero .sub b{color:var(--cream);}
 
-  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:-22px auto 30px;padding:0 16px;max-width:1080px;}
+  .tiles-row{margin:-22px auto 30px;padding:0 16px;max-width:1080px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;}
+  .tiles{flex:1 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;}
   .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 12px;min-width:0;}
-  .tile .n{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--text);overflow-wrap:break-word;}
+  .tile .n{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--text);white-space:nowrap;}
   .tile .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;overflow-wrap:break-word;}
-  .tile.currency-tile{display:block;width:100%;text-align:left;font:inherit;-webkit-appearance:none;appearance:none;cursor:pointer;}
-  .tile.currency-tile:hover{border-color:var(--pink);}
-  .tile.currency-tile .n{font-size:15px;line-height:1.3;color:var(--pink);}
+
+  .currency-toggle-btn{flex:0 0 auto;background:var(--lime);color:var(--ink);border:none;border-radius:999px;padding:9px 18px;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
+  .currency-toggle-btn:hover{background:#b3e619;}
+  @media (max-width:640px){
+    .currency-toggle-btn{width:100%;}
+  }
 
   section{margin:40px 0;}
   .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;}
@@ -146,17 +150,18 @@
   </div>
 </section>
 
-<div class="tiles">
-  <div class="tile"><div class="n">492,224</div><div class="l">Total reach</div></div>
-  <div class="tile"><div class="n">34,205</div><div class="l">Avg views / post</div></div>
-  <div class="tile"><div class="n">1.39×</div><div class="l">Views per person reached</div></div>
-  <div class="tile"><div class="n">1,856</div><div class="l">Total engagements</div></div>
-  <div class="tile"><div class="n">0.38%</div><div class="l">Eng. rate of reach</div></div>
-  <div class="tile"><div class="n"><span class="hkd" data-hkd="36687.39" data-original="HK$36,687">HK$36,687</span></div><div class="l">Ad spend</div></div>
-  <div class="tile"><div class="n"><span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span></div><div class="l">Blended CPM</div></div>
-  <button class="tile currency-tile" id="currencyToggle" onclick="toggleCurrency()">
-    <div class="n" id="currencyToggleLabel">Show in &pound;</div>
-    <div class="l">Tap to convert</div>
+<div class="tiles-row">
+  <div class="tiles">
+    <div class="tile"><div class="n">492,224</div><div class="l">Total reach</div></div>
+    <div class="tile"><div class="n">34,205</div><div class="l">Avg views / post</div></div>
+    <div class="tile"><div class="n">1.39×</div><div class="l">Views per person reached</div></div>
+    <div class="tile"><div class="n">1,856</div><div class="l">Total engagements</div></div>
+    <div class="tile"><div class="n">0.38%</div><div class="l">Eng. rate of reach</div></div>
+    <div class="tile"><div class="n"><span class="hkd" data-hkd="36687.39" data-original="HK$36,687">HK$36,687</span></div><div class="l">Ad spend</div></div>
+    <div class="tile"><div class="n"><span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span></div><div class="l">Blended CPM</div></div>
+  </div>
+  <button class="currency-toggle-btn" id="currencyToggle" onclick="toggleCurrency()">
+    <span id="currencyToggleLabel">Show in &pound;</span>
   </button>
 </div>
 
