@@ -52,9 +52,12 @@
   .hero .sub b{color:var(--cream);}
 
   .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:-22px auto 30px;padding:0 16px;max-width:1080px;}
-  .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 12px;}
-  .tile .n{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--text);}
-  .tile .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;}
+  .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 12px;min-width:0;}
+  .tile .n{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--text);overflow-wrap:break-word;}
+  .tile .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;overflow-wrap:break-word;}
+  .tile.currency-tile{display:block;width:100%;text-align:left;font:inherit;-webkit-appearance:none;appearance:none;cursor:pointer;}
+  .tile.currency-tile:hover{border-color:var(--pink);}
+  .tile.currency-tile .n{font-size:15px;line-height:1.3;color:var(--pink);}
 
   section{margin:40px 0;}
   .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px;}
@@ -132,7 +135,6 @@
 <header class="top">
   <div class="bar">
     <b>BRIGHTON PRIDE</b> · CAMPAIGN RESULTS · <span class="date">31 JUL – 13 AUG 2026</span>
-    <button class="currency-toggle" id="currencyToggle" onclick="toggleCurrency()">Show in &pound;</button>
   </div>
 </header>
 
@@ -152,6 +154,10 @@
   <div class="tile"><div class="n">0.38%</div><div class="l">Eng. rate of reach</div></div>
   <div class="tile"><div class="n"><span class="hkd" data-hkd="36687.39" data-original="HK$36,687">HK$36,687</span></div><div class="l">Ad spend</div></div>
   <div class="tile"><div class="n"><span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span></div><div class="l">Blended CPM</div></div>
+  <button class="tile currency-tile" id="currencyToggle" onclick="toggleCurrency()">
+    <div class="n" id="currencyToggleLabel">Show in &pound;</div>
+    <div class="l">Tap to convert</div>
+  </button>
 </div>
 
 <div class="wrap">
@@ -481,8 +487,8 @@
         ? formatGBP(parseFloat(rangeEl.getAttribute('data-low'))) + '–' + formatGBP(parseFloat(rangeEl.getAttribute('data-high')))
         : rangeEl.getAttribute('data-original');
     }
-    var btn = document.getElementById('currencyToggle');
-    if(btn) btn.innerHTML = showingGBP ? 'Show in HK$' : 'Show in &pound;';
+    var btnLabel = document.getElementById('currencyToggleLabel');
+    if(btnLabel) btnLabel.innerHTML = showingGBP ? 'Show in HK$' : 'Show in &pound;';
   }
 </script>
 
