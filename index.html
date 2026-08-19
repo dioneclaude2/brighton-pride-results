@@ -76,11 +76,8 @@
   .verdicts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:16px;}
   .verdict{border:1px solid var(--line);border-radius:10px;padding:16px;}
   .verdict h3{margin:0 0 4px;font-size:15px;letter-spacing:-.01em;}
-  .verdict .pill{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px;display:inline-block;}
+  .verdict .pill{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin-bottom:8px;display:inline-block;color:var(--muted);}
   .verdict p{font-size:13px;color:var(--text);margin:0;}
-  .pill.mid{color:var(--warn);}
-  .pill.good{color:var(--good);}
-  .pill.inconclusive{color:var(--muted);}
 
   .teamgroup{margin-top:24px;}
   .teamgroup h3{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.08em;font-weight:700;margin:0 0 10px;display:flex;align-items:center;gap:8px;color:var(--text);}
@@ -152,7 +149,7 @@
     <div class="card">
       <span class="tag">All teams</span>
       <h2>Every team, side by side</h2>
-      <p class="desc">Raw totals are mostly a budget story: Lauren's Team received 92% of all ad spend, so it leads every column below by default. Engagement rate of reach is the fairer read of content quality.</p>
+      <p class="desc">Ad spend wasn't split evenly across teams (92% / &lt;1% / 0%), which shapes the raw totals below — more budget behind a team's posts naturally means more views and reach. Engagement rate (per person reached) is included alongside so budget and audience response can be read separately.</p>
 
       <div class="legend">
         <span><i class="dot" style="background:#e6197a"></i> Lauren's Team</span>
@@ -205,23 +202,24 @@
 
   <!-- VERDICTS -->
   <section>
-    <span class="tag">Verdict</span>
-    <h2>What each team's numbers actually mean</h2>
+    <span class="tag">By team</span>
+    <h2>What the data shows, team by team</h2>
+    <p class="desc">Each team's own numbers, in context — not ranked against each other. For reference, the campaign-wide engagement rate was 0.38% of reach.</p>
     <div class="verdicts">
       <div class="verdict">
-        <div class="pill mid">Mid — biggest numbers, weakest resonance</div>
+        <div class="pill">11 posts · 5 organic, 6 boosted</div>
         <h3>Lauren's Team</h3>
-        <p>Got 92% of the entire ad budget ($33,734 of $36,687) and posted 11 times, so it leads on every raw total. But its engagement rate on reach is only 0.28% — the lowest of the three teams — meaning the huge reach is mostly bought, not earned. 38% of its ad spend ($13,758.81) sits on a single post whose ad attribution is unconfirmed (duplicate ad name in the source data), so even the paid-performance number carries real uncertainty.</p>
+        <p>539,510 views and 413,817 reach, backed by 92% of the total ad budget ($33,734 of $36,687). Engagement rate on reach was 0.28%. One item to confirm: 38% of this team's spend ($13,758.81) sits on a single post with an unconfirmed ad attribution, due to a duplicate ad name in the source data — a tracking fix for next time.</p>
       </div>
       <div class="verdict">
-        <div class="pill good">Did well — most efficient, most resonant</div>
+        <div class="pill">7 posts · 4 organic, 3 boosted</div>
         <h3>Content Forge</h3>
-        <p>Ran on less than 1% of the total ad budget ($198.56) yet produced the best engagement rate of the two well-resourced teams (0.87% of reach — ~3× Lauren's Team) and added extra reach from Facebook cross-posting no other team captured. Pride-centered content clearly resonated per viewer — it just was never given real paid support, so its ceiling with a proper budget is untested.</p>
+        <p>131,796 views and 69,788 reach, on under 1% of the total ad budget ($198.56). Engagement rate on reach was 0.87%, with additional reach from Facebook cross-posting not counted in the Instagram totals above. Content leaned into Pride-specific themes throughout.</p>
       </div>
       <div class="verdict">
-        <div class="pill inconclusive">Inconclusive — too little activity</div>
+        <div class="pill">2 posts · 2 organic, 0 boosted</div>
         <h3>Team Nancy</h3>
-        <p>Only 2 posts, zero ad spend, reach under 9,000. Its engagement rate (1.07% of reach) is technically the highest of all three teams, but the sample is too small to call that a real signal. The real story here is volume: this team barely showed up in the campaign.</p>
+        <p>12,791 views and 8,619 reach, entirely organic. Engagement rate on reach was 1.07%. With only 2 posts, this is a small sample — more posting volume next time would give a clearer read on this team's numbers.</p>
       </div>
     </div>
   </section>
@@ -325,14 +323,15 @@
 
   <!-- KEY PROBLEMS -->
   <section>
-    <span class="tag">Read with caution</span>
-    <h2>Key problems &amp; risks in this data</h2>
+    <span class="tag">Worth knowing</span>
+    <h2>Data notes — what to verify or tidy up next time</h2>
+    <p class="desc">None of this changes the headline results — it's the fine print behind them, flagged so the next report is even cleaner.</p>
     <ol class="risklist">
-      <li><b>Ad budget is extremely lopsided</b>, so raw totals aren't a fair team comparison. Lauren's Team got 92% of all ad spend, Content Forge under 1%, Team Nancy 0%. Comparing total views/reach across teams mostly measures who got budget, not who made better content.</li>
-      <li><b>A large chunk of Lauren's Team's paid results is unverified.</b> $13,758.81 (38% of that team's ad spend) is attributed to one post based on a duplicated ad name in the source CSV — the true split between the two ad line items for that post is not confirmed.</li>
-      <li><b>$2,754.49 in ad spend (7.5% of the total tracked budget) doesn't match any of the 21 organic posts provided.</b> That money is essentially untraceable in this report — either it ran on content outside the links given, or there's a naming/caption mismatch worth chasing down with whoever ran the ads.</li>
-      <li><b>Team Nancy's sample size (2 posts) is too small to draw conclusions from.</b> Its strong engagement rate could be genuine or could be noise from a single well-performing post — there isn't enough volume either way.</li>
-      <li><b>Views aren't fully apples-to-apples across post types.</b> Instagram's own disclaimer confirms Reels' organic views exclude ad-delivered plays, but image/carousel posts' views may already include some ad-driven plays — so Content Forge's organic-view totals (which include several image posts) may be very slightly inflated relative to Lauren's Team's, which is almost entirely Reels.</li>
+      <li><b>Ad budget wasn't split evenly</b>, so raw totals reflect who got budget as much as who made better content. Lauren's Team got 92% of all ad spend, Content Forge under 1%, Team Nancy 0% — worth keeping in mind when comparing teams on views or reach alone.</li>
+      <li><b>One post's ad attribution needs a quick confirm.</b> $13,758.81 (38% of Lauren's Team's ad spend) is attributed to a single post based on a duplicated ad name in the source CSV — the split between the two ad line items isn't confirmed yet. Worth a 5-minute check with whoever manages the ad account.</li>
+      <li><b>$2,754.49 in ad spend (7.5% of the tracked budget) doesn't match any of the 21 posts provided.</b> Likely ran on content outside the links given, or there's a naming mismatch — an easy trace with the ad account owner.</li>
+      <li><b>Team Nancy's sample (2 posts) is too small to call a trend yet.</b> Its engagement rate reads well in this window, but with only 2 posts that could easily shift with more volume — worth revisiting once there's a larger sample to look at.</li>
+      <li><b>Views aren't perfectly apples-to-apples across post types</b> — Instagram excludes ad-delivered plays from Reels' organic view counts but not consistently from image/carousel posts, so Content Forge's organic-view total (more image posts) may be very slightly inflated relative to Lauren's Team's (almost entirely Reels). A minor technical footnote, not a material shift in the results.</li>
     </ol>
   </section>
 
@@ -340,8 +339,8 @@
   <section>
     <div class="card" style="background:var(--ink);color:#fff;">
       <span class="tag" style="background:#fff;color:var(--ink);">Bottom line</span>
-      <h2 style="color:#fff;">The playbook for next time</h2>
-      <p class="bottomline" style="color:#e6e6e6;">The campaign's headline numbers are carried almost entirely by Lauren's Team, but that's a budget story more than a content story — give any team 92% of the ad spend and it will lead on views and reach. On a level playing field (engagement per person reached), Content Forge's Pride-centered content actually performed best, and it did so on essentially no ad budget. If this campaign runs again, the clearest opportunity is to put real ad spend behind Content Forge's content and see if it holds up at scale, resolve the duplicate ad-name and unmatched-spend issues with whoever manages the ad account so future reports are cleaner, and give Team Nancy a real posting volume before judging its output.</p>
+      <h2 style="color:#fff;">Reading this together</h2>
+      <p class="bottomline" style="color:#e6e6e6;">Across all three teams, the campaign generated 684,097 organic views, 492,224 accounts reached, and 1,856 total engagements, on $36,687.39 in matched ad spend. Ad budget was concentrated on one team (92%), which shapes the raw totals — more spend behind a team's posts means more views and reach, independent of the content itself. Reading engagement rate (per person reached) alongside the raw totals gives a fuller picture of how each team's content landed with the audience it reached. For next time: closing the two ad-tracking gaps above would make budget attribution cleaner across the board, and more posting volume for the smaller-sample team would make its numbers easier to read with confidence.</p>
     </div>
   </section>
 
