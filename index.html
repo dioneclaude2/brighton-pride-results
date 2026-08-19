@@ -41,6 +41,8 @@
   }
   header.top .bar b{color:var(--cream);}
   header.top .bar .date{color:var(--pink);}
+  .currency-toggle{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;background:transparent;color:var(--lime);border:1px solid var(--lime);border-radius:999px;padding:3px 10px;cursor:pointer;}
+  .currency-toggle:hover{background:var(--lime);color:var(--ink);}
 
   .hero{background:var(--ink);color:var(--cream);padding:34px 26px 30px;}
   .hero .inner{max-width:1080px;margin:0 auto;}
@@ -130,6 +132,7 @@
 <header class="top">
   <div class="bar">
     <b>BRIGHTON PRIDE</b> · CAMPAIGN RESULTS · <span class="date">31 JUL – 13 AUG 2026</span>
+    <button class="currency-toggle" id="currencyToggle" onclick="toggleCurrency()">Show in &pound;</button>
   </div>
 </header>
 
@@ -137,7 +140,7 @@
   <div class="wrap">
     <div class="eyebrow">Total organic views · 20 campaign posts · 3 teams</div>
     <div class="headline">684,097</div>
-    <div class="sub">Hello Nancy's Brighton Pride content across <b>Lauren's Team</b>, <b>Content Forge</b> and <b>Team Nancy</b> — 11 organic posts, 9 boosted, and HK$36,687.39 in matched Meta ad spend. Instagram is the source for all teams; Content Forge content also cross-posted to Facebook.</div>
+    <div class="sub">Hello Nancy's Brighton Pride content across <b>Lauren's Team</b>, <b>Content Forge</b> and <b>Team Nancy</b> — 11 organic posts, 9 boosted, and <span class="hkd" data-hkd="36687.39" data-original="HK$36,687.39">HK$36,687.39</span> in matched Meta ad spend. Instagram is the source for all teams; Content Forge content also cross-posted to Facebook.</div>
   </div>
 </section>
 
@@ -147,8 +150,8 @@
   <div class="tile"><div class="n">1.39×</div><div class="l">Views per person reached</div></div>
   <div class="tile"><div class="n">1,856</div><div class="l">Total engagements</div></div>
   <div class="tile"><div class="n">0.38%</div><div class="l">Eng. rate of reach</div></div>
-  <div class="tile"><div class="n">HK$36,687</div><div class="l">Ad spend</div></div>
-  <div class="tile"><div class="n">HK$45.42</div><div class="l">Blended CPM</div></div>
+  <div class="tile"><div class="n"><span class="hkd" data-hkd="36687.39" data-original="HK$36,687">HK$36,687</span></div><div class="l">Ad spend</div></div>
+  <div class="tile"><div class="n"><span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span></div><div class="l">Blended CPM</div></div>
 </div>
 
 <div class="wrap">
@@ -158,7 +161,7 @@
     <div class="card" style="border:2px solid var(--ink);">
       <span class="tag">Overall verdict</span>
       <h2>Did the campaign work?</h2>
-      <p class="bottomline" style="margin-top:10px;">Yes — and the ad spend did exactly what it was meant to do: the campaign generated 684,097 views and reached 492,224 accounts across 20 posts (11 organic, 9 boosted) in two weeks, with the 9 boosted posts driving 83% of that volume (569,715 of 684,097 views), including both of the top 2 highest-viewed posts — a clear sign the paid promotion worked. On top of that, the 11 organic-only posts still pulled in a solid 114,382 views (17%) with zero spend behind them, a good baseline to build from. Engagement rate landed at 0.38% of reach — modest, and an easy lever to push higher next time. HK$36,687.39 in spend bought a blended CPM of HK$45.42, with two ad-account line items worth a quick confirm to make the numbers fully clean. Net read: the campaign delivered real reach, largely through paid promotion doing its job — worth budgeting for again, and worth testing whether the organic-only formats scale just as well with a bit of spend behind them.</p>
+      <p class="bottomline" style="margin-top:10px;">Yes — and the ad spend did exactly what it was meant to do: the campaign generated 684,097 views and reached 492,224 accounts across 20 posts (11 organic, 9 boosted) in two weeks, with the 9 boosted posts driving 83% of that volume (569,715 of 684,097 views), including both of the top 2 highest-viewed posts — a clear sign the paid promotion worked. On top of that, the 11 organic-only posts still pulled in a solid 114,382 views (17%) with zero spend behind them, a good baseline to build from. Engagement rate landed at 0.38% of reach — modest, and an easy lever to push higher next time. <span class="hkd" data-hkd="36687.39" data-original="HK$36,687.39">HK$36,687.39</span> in spend bought a blended CPM of <span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span>, with two ad-account line items worth a quick confirm to make the numbers fully clean. Net read: the campaign delivered real reach, largely through paid promotion doing its job — worth budgeting for again, and worth testing whether the organic-only formats scale just as well with a bit of spend behind them.</p>
     </div>
   </section>
 
@@ -259,12 +262,12 @@
         <tr>
           <td>Lauren's Team</td><td class="num">11</td><td class="num">5</td><td class="num">6</td>
           <td class="num">539,510</td><td class="num">413,817</td><td class="num">0.28%</td>
-          <td class="num">HK$33,734.34</td><td class="num">91.95%</td>
+          <td class="num"><span class="hkd" data-hkd="33734.34" data-original="HK$33,734.34">HK$33,734.34</span></td><td class="num">91.95%</td>
         </tr>
         <tr>
           <td>Content Forge</td><td class="num">7</td><td class="num">4</td><td class="num">3</td>
           <td class="num">131,796</td><td class="num">69,788</td><td class="num">0.87%</td>
-          <td class="num">HK$198.56</td><td class="num">0.54%</td>
+          <td class="num"><span class="hkd" data-hkd="198.56" data-original="HK$198.56">HK$198.56</span></td><td class="num">0.54%</td>
         </tr>
         <tr>
           <td>Team Nancy</td><td class="num">2</td><td class="num">2</td><td class="num">0</td>
@@ -274,12 +277,12 @@
         <tr>
           <td>Unmatched ad spend</td><td class="num">—</td><td class="num">—</td><td class="num">—</td>
           <td class="num">—</td><td class="num">—</td><td class="num">—</td>
-          <td class="num">HK$2,754.49</td><td class="num">7.51%</td>
+          <td class="num"><span class="hkd" data-hkd="2754.49" data-original="HK$2,754.49">HK$2,754.49</span></td><td class="num">7.51%</td>
         </tr>
         <tr class="total">
           <td>TOTAL</td><td class="num">20</td><td class="num">11</td><td class="num">9</td>
           <td class="num">684,097</td><td class="num">492,224</td><td class="num">0.38%</td>
-          <td class="num">HK$36,687.39</td><td class="num">100%</td>
+          <td class="num"><span class="hkd" data-hkd="36687.39" data-original="HK$36,687.39">HK$36,687.39</span></td><td class="num">100%</td>
         </tr>
       </table>
       </div>
@@ -295,12 +298,12 @@
       <div class="verdict">
         <div class="pill">11 posts · 5 organic, 6 boosted</div>
         <h3>Lauren's Team</h3>
-        <p>539,510 views and 413,817 reach, backed by 92% of the total ad budget (HK$33,734 of HK$36,687). Engagement rate on reach was 0.28%. One item to confirm: 38% of this team's spend (HK$13,758.81) sits on a single post with an unconfirmed ad attribution, due to a duplicate ad name in the source data — a tracking fix for next time.</p>
+        <p>539,510 views and 413,817 reach, backed by 92% of the total ad budget (<span class="hkd" data-hkd="33734.34" data-original="HK$33,734">HK$33,734</span> of <span class="hkd" data-hkd="36687.39" data-original="HK$36,687">HK$36,687</span>). Engagement rate on reach was 0.28%. One item to confirm: 38% of this team's spend (<span class="hkd" data-hkd="13758.81" data-original="HK$13,758.81">HK$13,758.81</span>) sits on a single post with an unconfirmed ad attribution, due to a duplicate ad name in the source data — a tracking fix for next time.</p>
       </div>
       <div class="verdict">
         <div class="pill">7 posts · 4 organic, 3 boosted</div>
         <h3>Content Forge</h3>
-        <p>131,796 views and 69,788 reach, on under 1% of the total ad budget (HK$198.56). Engagement rate on reach was 0.87%, with additional reach from Facebook cross-posting not counted in the Instagram totals above. Content leaned into Pride-specific themes throughout.</p>
+        <p>131,796 views and 69,788 reach, on under 1% of the total ad budget (<span class="hkd" data-hkd="198.56" data-original="HK$198.56">HK$198.56</span>). Engagement rate on reach was 0.87%, with additional reach from Facebook cross-posting not counted in the Instagram totals above. Content leaned into Pride-specific themes throughout.</p>
       </div>
       <div class="verdict">
         <div class="pill">2 posts · 2 organic, 0 boosted · supporting role</div>
@@ -321,17 +324,17 @@
         <h3><span class="swatch" style="background:#e6197a"></span>Lauren's Team — 11 posts · 5 organic, 6 boosted</h3>
         <div class="posts">
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgHLVGjTMr/" target="_blank" rel="noopener">Brighton Pride with the Nancy team (umbrella reel)</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · matched ad spend HK$13,758.81 (2 ad line items, tentative — see Ad Spend section)</div><div class="metrics"><div class="views">7,966 views</div><div>19 likes · 2 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgHLVGjTMr/"><a class="thumb-link" href="https://www.instagram.com/p/DbgHLVGjTMr/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgHLVGjTMr/" target="_blank" rel="noopener">Brighton Pride with the Nancy team (umbrella reel)</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · matched ad spend <span class="hkd" data-hkd="13758.81" data-original="HK$13,758.81">HK$13,758.81</span> (2 ad line items, tentative — see Ad Spend section)</div><div class="metrics"><div class="views">7,966 views</div><div>19 likes · 2 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgHLVGjTMr/"><a class="thumb-link" href="https://www.instagram.com/p/DbgHLVGjTMr/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgIUudEdJP/" target="_blank" rel="noopener">free v!br4tors at Pride</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · ad spend HK$425.58 · 8,547 paid views</div><div class="metrics"><div class="views">17,341 views</div><div>92 likes · 33 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgIUudEdJP/"><a class="thumb-link" href="https://www.instagram.com/p/DbgIUudEdJP/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgIUudEdJP/" target="_blank" rel="noopener">free v!br4tors at Pride</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · ad spend <span class="hkd" data-hkd="425.58" data-original="HK$425.58">HK$425.58</span> · 8,547 paid views</div><div class="metrics"><div class="views">17,341 views</div><div>92 likes · 33 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgIUudEdJP/"><a class="thumb-link" href="https://www.instagram.com/p/DbgIUudEdJP/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgJa8jDM1P/" target="_blank" rel="noopener">the women who are still learning to be comfortable</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · ad spend HK$7,940.51 · 159,984 paid views</div><div class="metrics"><div class="views">173,338 views</div><div>250 likes · 19 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgJa8jDM1P/"><a class="thumb-link" href="https://www.instagram.com/p/DbgJa8jDM1P/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgJa8jDM1P/" target="_blank" rel="noopener">the women who are still learning to be comfortable</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · ad spend <span class="hkd" data-hkd="7940.51" data-original="HK$7,940.51">HK$7,940.51</span> · 159,984 paid views</div><div class="metrics"><div class="views">173,338 views</div><div>250 likes · 19 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgJa8jDM1P/"><a class="thumb-link" href="https://www.instagram.com/p/DbgJa8jDM1P/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbnjLF8DXPI/" target="_blank" rel="noopener">45+ women don't need permission</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 4 · ad spend HK$11,571.95 · 283,160 paid views</div><div class="metrics"><div class="views">305,279 views</div><div>353 likes · 27 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbnjLF8DXPI/"><a class="thumb-link" href="https://www.instagram.com/p/DbnjLF8DXPI/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbnjLF8DXPI/" target="_blank" rel="noopener">45+ women don't need permission</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 4 · ad spend <span class="hkd" data-hkd="11571.95" data-original="HK$11,571.95">HK$11,571.95</span> · 283,160 paid views</div><div class="metrics"><div class="views">305,279 views</div><div>353 likes · 27 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbnjLF8DXPI/"><a class="thumb-link" href="https://www.instagram.com/p/DbnjLF8DXPI/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbp-7H6DWgD/" target="_blank" rel="noopener">the fight for pleasure and the fight for pride</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 5 · ad spend HK$20.00 · 463 paid views</div><div class="metrics"><div class="views">7,583 views</div><div>26 likes · 1 share</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbp-7H6DWgD/"><a class="thumb-link" href="https://www.instagram.com/p/Dbp-7H6DWgD/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbp-7H6DWgD/" target="_blank" rel="noopener">the fight for pleasure and the fight for pride</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 5 · ad spend <span class="hkd" data-hkd="20.0" data-original="HK$20.00">HK$20.00</span> · 463 paid views</div><div class="metrics"><div class="views">7,583 views</div><div>26 likes · 1 share</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbp-7H6DWgD/"><a class="thumb-link" href="https://www.instagram.com/p/Dbp-7H6DWgD/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbqFyeyDqru/" target="_blank" rel="noopener">the same courage it takes to walk in a pride parade</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 5 · ad spend HK$17.49 · 412 paid views</div><div class="metrics"><div class="views">6,761 views</div><div>23 likes · 2 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbqFyeyDqru/"><a class="thumb-link" href="https://www.instagram.com/p/DbqFyeyDqru/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbqFyeyDqru/" target="_blank" rel="noopener">the same courage it takes to walk in a pride parade</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 5 · ad spend <span class="hkd" data-hkd="17.49" data-original="HK$17.49">HK$17.49</span> · 412 paid views</div><div class="metrics"><div class="views">6,761 views</div><div>23 likes · 2 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbqFyeyDqru/"><a class="thumb-link" href="https://www.instagram.com/p/DbqFyeyDqru/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
         <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbx0Ffujpwm/" target="_blank" rel="noopener">35 years of Brighton Pride</a><span class="badge organic">Organic</span></div><div class="meta">Aug 8</div><div class="metrics"><div class="views">3,640 views</div><div>15 likes · 1 share</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbx0Ffujpwm/"><a class="thumb-link" href="https://www.instagram.com/p/Dbx0Ffujpwm/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
@@ -355,11 +358,11 @@
 
         <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbeF2I8jBH7/" target="_blank" rel="noopener">We found some newly weds and gave them vibes as a gift</a><span class="badge organic">Organic</span></div><div class="meta">Aug 1 · also on Facebook: 7,325 views</div><div class="metrics"><div class="views">17,730 views</div><div>80 likes · 3 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbeF2I8jBH7/"><a class="thumb-link" href="https://www.instagram.com/p/DbeF2I8jBH7/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbf5M9fjHyG/" target="_blank" rel="noopener">Spreading the love at Brighton Pride handing out toys</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · ad spend HK$77.95 · 1,422 paid views · also on Facebook: 7,244 views<div class="note">Views may already include some ad-driven plays for image posts — see methodology</div></div><div class="metrics"><div class="views">16,300 views</div><div>19 likes · 4 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbf5M9fjHyG/"><a class="thumb-link" href="https://www.instagram.com/p/Dbf5M9fjHyG/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbf5M9fjHyG/" target="_blank" rel="noopener">Spreading the love at Brighton Pride handing out toys</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 1 · ad spend <span class="hkd" data-hkd="77.95" data-original="HK$77.95">HK$77.95</span> · 1,422 paid views · also on Facebook: 7,244 views<div class="note">Views may already include some ad-driven plays for image posts — see methodology</div></div><div class="metrics"><div class="views">16,300 views</div><div>19 likes · 4 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbf5M9fjHyG/"><a class="thumb-link" href="https://www.instagram.com/p/Dbf5M9fjHyG/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgbVaUMbOR/" target="_blank" rel="noopener">Did you get lucky and get a lem, avo or berri at Brighton Pride?</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 2 · ad spend HK$13.27 · 255 paid views · also on Facebook: 12,103 views</div><div class="metrics"><div class="views">21,332 views</div><div>29 likes · 7 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgbVaUMbOR/"><a class="thumb-link" href="https://www.instagram.com/p/DbgbVaUMbOR/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/DbgbVaUMbOR/" target="_blank" rel="noopener">Did you get lucky and get a lem, avo or berri at Brighton Pride?</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 2 · ad spend <span class="hkd" data-hkd="13.27" data-original="HK$13.27">HK$13.27</span> · 255 paid views · also on Facebook: 12,103 views</div><div class="metrics"><div class="views">21,332 views</div><div>29 likes · 7 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/DbgbVaUMbOR/"><a class="thumb-link" href="https://www.instagram.com/p/DbgbVaUMbOR/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
-        <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbgjf6GExxl/" target="_blank" rel="noopener">Brighton Pride is full of BEAUTY!</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 2 · ad spend HK$107.34 · 1,909 paid views</div><div class="metrics"><div class="views">13,815 views</div><div>38 likes · 13 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbgjf6GExxl/"><a class="thumb-link" href="https://www.instagram.com/p/Dbgjf6GExxl/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
+        <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbgjf6GExxl/" target="_blank" rel="noopener">Brighton Pride is full of BEAUTY!</a><span class="badge boosted">Boosted</span></div><div class="meta">Aug 2 · ad spend <span class="hkd" data-hkd="107.34" data-original="HK$107.34">HK$107.34</span> · 1,909 paid views</div><div class="metrics"><div class="views">13,815 views</div><div>38 likes · 13 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbgjf6GExxl/"><a class="thumb-link" href="https://www.instagram.com/p/Dbgjf6GExxl/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
 
         <div class="post"><div class="title"><a href="https://www.instagram.com/p/Dbxr7ySAjt_/" target="_blank" rel="noopener">It's been one week since Hello Nancy took on Brighton Pride</a><span class="badge organic">Organic</span></div><div class="meta">Aug 8</div><div class="metrics"><div class="views">5,335 views</div><div>43 likes · 2 shares</div></div><div class="embed-wrap thumb lazy-embed" data-embed-url="https://www.instagram.com/p/Dbxr7ySAjt_/"><a class="thumb-link" href="https://www.instagram.com/p/Dbxr7ySAjt_/" target="_blank" rel="noopener" aria-label="Open on Instagram"></a><div class="thumb-loading">Loading preview&hellip;</div></div></div>
         </div>
@@ -384,27 +387,27 @@
     <div class="card">
       <span class="tag">Paid</span>
       <h2>Ad spend — all 12 Meta ads, matched or flagged</h2>
-      <p class="desc">HelloRegalio2 Ads, Jul 18 – Aug 16, 2026, HK$36,687.39 total. Every ad was matched to a post by exact or partial caption text — never assumed. Two ads have no matching post in the 21 links provided; one post has two ad line items sharing an identical ad name, so the split between them is flagged rather than guessed.</p>
+      <p class="desc">HelloRegalio2 Ads, Jul 18 – Aug 16, 2026, <span class="hkd" data-hkd="36687.39" data-original="HK$36,687.39">HK$36,687.39</span> total. Every ad was matched to a post by exact or partial caption text — never assumed. Two ads have no matching post in the 21 links provided; one post has two ad line items sharing an identical ad name, so the split between them is flagged rather than guessed.</p>
 
       <div style="overflow-x:auto;">
       <table>
         <tr><th>Ad name</th><th class="num">Ad views</th><th class="num">Spend</th><th class="num">CPM</th><th>Matched post</th><th>Basis</th></tr>
-        <tr><td>Did you get lucky and get a lem, avo or berri at Brighton Pride?</td><td class="num">255</td><td class="num">HK$13.27</td><td class="num">HK$52.04</td><td><span class="badge matched">Matched</span> Content Forge – DbgbVaUMbOR</td><td>Exact caption match</td></tr>
-        <tr><td>Brighton Pride is full of BEAUTY!</td><td class="num">1,909</td><td class="num">HK$107.34</td><td class="num">HK$56.23</td><td><span class="badge matched">Matched</span> Content Forge – Dbgjf6GExxl</td><td>Exact caption match</td></tr>
-        <tr><td>Spreading the love at Brighton Pride</td><td class="num">1,422</td><td class="num">HK$77.95</td><td class="num">HK$54.82</td><td><span class="badge matched">Matched</span> Content Forge – Dbf5M9fjHyG</td><td>Caption starts with exact phrase</td></tr>
-        <tr><td>the women who are still learning to be comfortable</td><td class="num">159,984</td><td class="num">HK$7,940.51</td><td class="num">HK$49.63</td><td><span class="badge matched">Matched</span> Lauren's Team – DbgJa8jDM1P</td><td>Exact caption match</td></tr>
-        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 1 of 2)</span></td><td class="num">193</td><td class="num">HK$7.94</td><td class="num">HK$41.14</td><td><span class="badge tentative">Tentative</span> Lauren's Team – DbgHLVGjTMr</td><td>Duplicate ad name — could not confirm which line item(s) apply. Flagged, not assumed.</td></tr>
-        <tr><td>free v!br4tors at Pride because pleasure belongs to every body</td><td class="num">8,547</td><td class="num">HK$425.58</td><td class="num">HK$49.79</td><td><span class="badge matched">Matched</span> Lauren's Team – DbgIUudEdJP</td><td>Exact caption match</td></tr>
-        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 2 of 2)</span></td><td class="num">277,707</td><td class="num">HK$13,750.87</td><td class="num">HK$49.52</td><td><span class="badge tentative">Tentative</span> Lauren's Team – DbgHLVGjTMr</td><td>Same duplicate-name issue — likely a 2nd line item for the same post, not confirmed</td></tr>
-        <tr><td>Weather forecast for Brighton Pride</td><td class="num">73,661</td><td class="num">HK$2,748.09</td><td class="num">HK$37.31</td><td><span class="badge unmatched">Unmatched</span> No match found</td><td>No post in any team's link list has this caption</td></tr>
-        <tr><td>More color, more laughter, more freedom, more pleasure</td><td class="num">75</td><td class="num">HK$6.40</td><td class="num">HK$85.33</td><td><span class="badge unmatched">Unmatched</span> No match found</td><td>No post in any team's link list has this caption</td></tr>
-        <tr><td>45+ women don't need permission.</td><td class="num">283,160</td><td class="num">HK$11,571.95</td><td class="num">HK$40.87</td><td><span class="badge matched">Matched</span> Lauren's Team – DbnjLF8DXPI</td><td>Exact caption match</td></tr>
-        <tr><td>the fight for pleasure and the fight for pride</td><td class="num">463</td><td class="num">HK$20.00</td><td class="num">HK$43.20</td><td><span class="badge matched">Matched</span> Lauren's Team – Dbp-7H6DWgD</td><td>Exact caption match</td></tr>
-        <tr><td>the same courage it takes to walk in a pride parade</td><td class="num">412</td><td class="num">HK$17.49</td><td class="num">HK$42.45</td><td><span class="badge matched">Matched</span> Lauren's Team – DbqFyeyDqru</td><td>Exact caption match</td></tr>
-        <tr class="total"><td>TOTAL</td><td class="num">807,788</td><td class="num">HK$36,687.39</td><td class="num">HK$45.42</td><td></td><td></td></tr>
+        <tr><td>Did you get lucky and get a lem, avo or berri at Brighton Pride?</td><td class="num">255</td><td class="num"><span class="hkd" data-hkd="13.27" data-original="HK$13.27">HK$13.27</span></td><td class="num"><span class="hkd" data-hkd="52.04" data-original="HK$52.04">HK$52.04</span></td><td><span class="badge matched">Matched</span> Content Forge – DbgbVaUMbOR</td><td>Exact caption match</td></tr>
+        <tr><td>Brighton Pride is full of BEAUTY!</td><td class="num">1,909</td><td class="num"><span class="hkd" data-hkd="107.34" data-original="HK$107.34">HK$107.34</span></td><td class="num"><span class="hkd" data-hkd="56.23" data-original="HK$56.23">HK$56.23</span></td><td><span class="badge matched">Matched</span> Content Forge – Dbgjf6GExxl</td><td>Exact caption match</td></tr>
+        <tr><td>Spreading the love at Brighton Pride</td><td class="num">1,422</td><td class="num"><span class="hkd" data-hkd="77.95" data-original="HK$77.95">HK$77.95</span></td><td class="num"><span class="hkd" data-hkd="54.82" data-original="HK$54.82">HK$54.82</span></td><td><span class="badge matched">Matched</span> Content Forge – Dbf5M9fjHyG</td><td>Caption starts with exact phrase</td></tr>
+        <tr><td>the women who are still learning to be comfortable</td><td class="num">159,984</td><td class="num"><span class="hkd" data-hkd="7940.51" data-original="HK$7,940.51">HK$7,940.51</span></td><td class="num"><span class="hkd" data-hkd="49.63" data-original="HK$49.63">HK$49.63</span></td><td><span class="badge matched">Matched</span> Lauren's Team – DbgJa8jDM1P</td><td>Exact caption match</td></tr>
+        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 1 of 2)</span></td><td class="num">193</td><td class="num"><span class="hkd" data-hkd="7.94" data-original="HK$7.94">HK$7.94</span></td><td class="num"><span class="hkd" data-hkd="41.14" data-original="HK$41.14">HK$41.14</span></td><td><span class="badge tentative">Tentative</span> Lauren's Team – DbgHLVGjTMr</td><td>Duplicate ad name — could not confirm which line item(s) apply. Flagged, not assumed.</td></tr>
+        <tr><td>free v!br4tors at Pride because pleasure belongs to every body</td><td class="num">8,547</td><td class="num"><span class="hkd" data-hkd="425.58" data-original="HK$425.58">HK$425.58</span></td><td class="num"><span class="hkd" data-hkd="49.79" data-original="HK$49.79">HK$49.79</span></td><td><span class="badge matched">Matched</span> Lauren's Team – DbgIUudEdJP</td><td>Exact caption match</td></tr>
+        <tr><td>Brighton Pride with the Nancy team <span class="note" style="display:inline">(line 2 of 2)</span></td><td class="num">277,707</td><td class="num"><span class="hkd" data-hkd="13750.87" data-original="HK$13,750.87">HK$13,750.87</span></td><td class="num"><span class="hkd" data-hkd="49.52" data-original="HK$49.52">HK$49.52</span></td><td><span class="badge tentative">Tentative</span> Lauren's Team – DbgHLVGjTMr</td><td>Same duplicate-name issue — likely a 2nd line item for the same post, not confirmed</td></tr>
+        <tr><td>Weather forecast for Brighton Pride</td><td class="num">73,661</td><td class="num"><span class="hkd" data-hkd="2748.09" data-original="HK$2,748.09">HK$2,748.09</span></td><td class="num"><span class="hkd" data-hkd="37.31" data-original="HK$37.31">HK$37.31</span></td><td><span class="badge unmatched">Unmatched</span> No match found</td><td>No post in any team's link list has this caption</td></tr>
+        <tr><td>More color, more laughter, more freedom, more pleasure</td><td class="num">75</td><td class="num"><span class="hkd" data-hkd="6.4" data-original="HK$6.40">HK$6.40</span></td><td class="num"><span class="hkd" data-hkd="85.33" data-original="HK$85.33">HK$85.33</span></td><td><span class="badge unmatched">Unmatched</span> No match found</td><td>No post in any team's link list has this caption</td></tr>
+        <tr><td>45+ women don't need permission.</td><td class="num">283,160</td><td class="num"><span class="hkd" data-hkd="11571.95" data-original="HK$11,571.95">HK$11,571.95</span></td><td class="num"><span class="hkd" data-hkd="40.87" data-original="HK$40.87">HK$40.87</span></td><td><span class="badge matched">Matched</span> Lauren's Team – DbnjLF8DXPI</td><td>Exact caption match</td></tr>
+        <tr><td>the fight for pleasure and the fight for pride</td><td class="num">463</td><td class="num"><span class="hkd" data-hkd="20.0" data-original="HK$20.00">HK$20.00</span></td><td class="num"><span class="hkd" data-hkd="43.2" data-original="HK$43.20">HK$43.20</span></td><td><span class="badge matched">Matched</span> Lauren's Team – Dbp-7H6DWgD</td><td>Exact caption match</td></tr>
+        <tr><td>the same courage it takes to walk in a pride parade</td><td class="num">412</td><td class="num"><span class="hkd" data-hkd="17.49" data-original="HK$17.49">HK$17.49</span></td><td class="num"><span class="hkd" data-hkd="42.45" data-original="HK$42.45">HK$42.45</span></td><td><span class="badge matched">Matched</span> Lauren's Team – DbqFyeyDqru</td><td>Exact caption match</td></tr>
+        <tr class="total"><td>TOTAL</td><td class="num">807,788</td><td class="num"><span class="hkd" data-hkd="36687.39" data-original="HK$36,687.39">HK$36,687.39</span></td><td class="num"><span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span></td><td></td><td></td></tr>
       </table>
       </div>
-      <p class="desc" style="margin:12px 0 0;">CPM = spend ÷ ad views × 1,000. Range across all 12 ads: HK$37.31 – HK$85.33. Blended CPM (total spend ÷ total ad views): HK$45.42.</p>
+      <p class="desc" style="margin:12px 0 0;">CPM = spend ÷ ad views × 1,000. Range across all 12 ads: <span class="hkd" data-hkd="37.31" data-original="HK$37.31">HK$37.31</span> – <span class="hkd" data-hkd="85.33" data-original="HK$85.33">HK$85.33</span>. Blended CPM (total spend ÷ total ad views): <span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span>.</p>
     </div>
   </section>
 
@@ -415,9 +418,9 @@
       <h2>Rates to plan against</h2>
       <p class="desc">Cost-efficiency figures for comparing against future campaigns.</p>
       <div class="benchmarks">
-        <div class="b"><div class="n">HK$45.42</div><div class="l">Blended CPM</div></div>
-        <div class="b"><div class="n">HK$37–85</div><div class="l">CPM range, 12 ads</div></div>
-        <div class="b"><div class="n">HK$53.63</div><div class="l">Ad spend / 1,000 organic views</div></div>
+        <div class="b"><div class="n"><span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span></div><div class="l">Blended CPM</div></div>
+        <div class="b"><div class="n"><span class="hkd-range" id="cpmRangeSpan" data-low="37.31" data-high="85.33" data-original="HK$37&ndash;85">HK$37&ndash;85</span></div><div class="l">CPM range, 12 ads</div></div>
+        <div class="b"><div class="n"><span class="hkd" data-hkd="53.63" data-original="HK$53.63">HK$53.63</span></div><div class="l">Ad spend / 1,000 organic views</div></div>
         <div class="b"><div class="n">34,205</div><div class="l">Avg views per post</div></div>
       </div>
     </div>
@@ -428,7 +431,7 @@
     <div class="card" style="background:var(--ink);color:#fff;">
       <span class="tag" style="background:#fff;color:var(--ink);">Bottom line</span>
       <h2 style="color:#fff;">Reading this together</h2>
-      <p class="bottomline" style="color:#e6e6e6;">Across all three teams, the campaign generated 684,097 organic views, 492,224 accounts reached, and 1,856 total engagements, on HK$36,687.39 in matched ad spend. Ad budget was concentrated on one team (92%), which shapes the raw totals — more spend behind a team's posts means more views and reach, independent of the content itself. Reading engagement rate (per person reached) alongside the raw totals gives a fuller picture of how each team's content landed with the audience it reached. For next time: closing the two flagged gaps in the ad-spend table (the tentative and unmatched rows) would make budget attribution cleaner across the board — Team Nancy's smaller post count reflects its supporting role on this campaign rather than a gap to close.</p>
+      <p class="bottomline" style="color:#e6e6e6;">Across all three teams, the campaign generated 684,097 organic views, 492,224 accounts reached, and 1,856 total engagements, on <span class="hkd" data-hkd="36687.39" data-original="HK$36,687.39">HK$36,687.39</span> in matched ad spend. Ad budget was concentrated on one team (92%), which shapes the raw totals — more spend behind a team's posts means more views and reach, independent of the content itself. Reading engagement rate (per person reached) alongside the raw totals gives a fuller picture of how each team's content landed with the audience it reached. For next time: closing the two flagged gaps in the ad-spend table (the tentative and unmatched rows) would make budget attribution cleaner across the board — Team Nancy's smaller post count reflects its supporting role on this campaign rather than a gap to close.</p>
     </div>
   </section>
 
@@ -440,7 +443,7 @@
       <li>For image/carousel posts, Instagram's disclaimer differs and does NOT state ad plays are excluded — so for those posts (e.g. Spreading the love at Brighton Pride), the Views figure may already include some ad-driven views. True organic-only views for that post are likely closer to (Views − Ad Views).</li>
       <li>Boosted vs Organic status was determined ONLY by matching each post's caption text against the 12 ad names in the CSV — not assumed. Instagram's own "Ad" section on each post was checked but found to appear on every post regardless of ad history, so it was not usable as a signal.</li>
       <li>"Brighton Pride with the Nancy team" appears TWICE in the ad CSV with different spend/views. Only one post (Lauren's Team, DbgHLVGjTMr) has a caption starting with this exact phrase, so both ad line items are tentatively attributed to it — flagged as unconfirmed rather than split arbitrarily.</li>
-      <li>Two ads ("Weather forecast for Brighton Pride", HK$2,748.09 spend; "More color, more laughter, more freedom, more pleasure", HK$6.40 spend) have no matching caption in any of the 21 links provided across all 3 teams. Not matched to any post — flagged as unresolved rather than guessed.</li>
+      <li>Two ads ("Weather forecast for Brighton Pride", <span class="hkd" data-hkd="2748.09" data-original="HK$2,748.09">HK$2,748.09</span> spend; "More color, more laughter, more freedom, more pleasure", <span class="hkd" data-hkd="6.4" data-original="HK$6.40">HK$6.40</span> spend) have no matching caption in any of the 21 links provided across all 3 teams. Not matched to any post — flagged as unresolved rather than guessed.</li>
       <li>Content Forge link #1 (DbdAn7Sshf3) was submitted twice in the original list — counted once.</li>
       <li>Several Content Forge posts are cross-posted to Facebook; their FB Views/Reactions/Comments are recorded separately and are NOT included in the IG Views/Likes/Comments totals.</li>
       <li>Dates for posts without an exact date shown (Instagram displayed "Xd"/"Xw" instead of a calendar date) were computed from that relative timestamp against Aug 18, 2026 — treat as approximate.</li>
@@ -455,6 +458,33 @@
     SOURCE: BRIGHTON PRIDE CAMPAIGN SHEET (GOOGLE SHEETS) · ENGAGEMENT RATE = (LIKES + COMMENTS + SAVES + SHARES) ÷ REACH · AD SPEND IN HKD AS REPORTED BY META
   </div>
 </footer>
+
+<script>
+  var GBP_RATE = 0.0942; // 1 HKD ≈ £0.0942, approx market rate as of 18 Aug 2026
+  var showingGBP = false;
+
+  function formatGBP(raw){
+    var gbp = raw * GBP_RATE;
+    return '£' + gbp.toLocaleString('en-GB', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+  }
+
+  function toggleCurrency(){
+    showingGBP = !showingGBP;
+    document.querySelectorAll('.hkd').forEach(function(el){
+      el.textContent = showingGBP
+        ? formatGBP(parseFloat(el.getAttribute('data-hkd')))
+        : el.getAttribute('data-original');
+    });
+    var rangeEl = document.getElementById('cpmRangeSpan');
+    if(rangeEl){
+      rangeEl.textContent = showingGBP
+        ? formatGBP(parseFloat(rangeEl.getAttribute('data-low'))) + '–' + formatGBP(parseFloat(rangeEl.getAttribute('data-high')))
+        : rangeEl.getAttribute('data-original');
+    }
+    var btn = document.getElementById('currencyToggle');
+    if(btn) btn.innerHTML = showingGBP ? 'Show in HK$' : 'Show in &pound;';
+  }
+</script>
 
 <script async src="//www.instagram.com/embed.js"></script>
 <script>
