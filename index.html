@@ -51,15 +51,18 @@
   .hero .sub{font-size:14px;color:var(--cream-dim);max-width:640px;}
   .hero .sub b{color:var(--cream);}
 
-  .tiles-row{margin:-22px auto 30px;padding:0 16px;max-width:1080px;display:flex;flex-wrap:wrap;align-items:center;gap:14px;}
-  .tiles{flex:1 1 640px;display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;}
+  .tiles-row{margin:-22px auto 30px;padding:0 16px;max-width:1080px;}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:10px;}
   .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 14px 12px;min-width:0;}
   .tile .n{font-size:24px;font-weight:800;letter-spacing:-.02em;color:var(--text);white-space:nowrap;}
   .tile .l{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px;overflow-wrap:break-word;}
 
+  .currency-row{display:flex;align-items:center;justify-content:flex-end;gap:10px;margin-top:12px;}
+  .currency-row-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
   .currency-toggle-btn{flex:0 0 auto;background:var(--lime);color:var(--ink);border:none;border-radius:999px;padding:9px 18px;font-family:var(--mono);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;white-space:nowrap;}
   .currency-toggle-btn:hover{background:#b3e619;}
   @media (max-width:640px){
+    .currency-row{justify-content:stretch;}
     .currency-toggle-btn{width:100%;}
   }
 
@@ -175,9 +178,12 @@
     <div class="tile"><div class="n"><span class="hkd" data-hkd="36687.39" data-original="HK$36,687">HK$36,687</span></div><div class="l">Ad spend</div></div>
     <div class="tile"><div class="n"><span class="hkd" data-hkd="45.42" data-original="HK$45.42">HK$45.42</span></div><div class="l">Blended CPM</div></div>
   </div>
-  <button class="currency-toggle-btn" id="currencyToggle" onclick="toggleCurrency()">
-    <span id="currencyToggleLabel">Show in &pound;</span>
-  </button>
+  <div class="currency-row">
+    <span class="currency-row-label">Currency</span>
+    <button class="currency-toggle-btn" id="currencyToggle" onclick="toggleCurrency()">
+      <span id="currencyToggleLabel">Show in &pound;</span>
+    </button>
+  </div>
 </div>
 
 <div class="wrap">
