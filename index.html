@@ -134,10 +134,10 @@
   .modal-box{background:var(--card);border-radius:12px;padding:28px;max-width:600px;width:100%;position:relative;}
   .modal-close{position:absolute;top:14px;right:14px;width:28px;height:28px;border-radius:999px;border:1px solid var(--line);background:#fff;font-family:var(--mono);font-size:14px;cursor:pointer;line-height:1;}
 
-  .notes-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;}
-  .notes-content p{font-size:14px;line-height:1.6;color:var(--text);margin:0 0 14px;}
-  .notes-content h4{font-size:13px;font-weight:800;letter-spacing:.01em;margin:22px 0 8px;color:var(--text);}
-  .notes-content ul{margin:0 0 14px;padding-left:20px;}
+  .notes-content{margin-top:18px;}
+  .notes-content h3{font-size:14px;font-weight:800;letter-spacing:-.01em;margin:20px 0 8px;color:var(--text);}
+  .notes-content h3:first-child{margin-top:0;}
+  .notes-content ul{margin:0 0 4px;padding-left:20px;}
   .notes-content li{font-size:13.5px;line-height:1.6;color:var(--text);margin-bottom:10px;}
   .notes-content li:last-child{margin-bottom:0;}
   .notes-content a{color:var(--pink);}
@@ -488,33 +488,29 @@
 <div class="modal-overlay" id="notesOverlay" onclick="if(event.target===this) closeNotes();">
   <div class="modal-box">
     <button class="modal-close" onclick="closeNotes()">&#10005;</button>
-    <div class="notes-meta">Crystal · Head of Marketing</div>
+    <span class="tag">Team feedback</span>
+    <h2>What's working, what's not, and what's next</h2>
+    <p class="desc">Crystal, Head of Marketing — drawing on lessons from the ASAP Hong Kong event.</p>
     <div class="notes-content">
-      <p>Morning <b>@Rahul Ramchand</b> <b>@Momo</b> <b>@Rachana</b></p>
-      <p>Brighton Campaign report is live 👇<br><a href="https://brighton-pride-results.vercel.app/" target="_blank" rel="noopener">brighton-pride-results.vercel.app</a></p>
-      <p>Had a proper look through, and pulling in what we learnt from the ASAP Hong Kong event — here's my take.</p>
-
-      <h4>What's working 💛</h4>
+      <h3>What's working 💛</h3>
       <ul>
-        <li>The pride footage is beautifully shot — genuinely strong material to work with</li>
+        <li>The pride footage is beautifully shot — genuinely strong material to work with.</li>
       </ul>
 
-      <h4>The gaps ⚠️</h4>
+      <h3>The gaps ⚠️</h3>
       <ul>
-        <li>It's almost all pride footage, barely any product in frame. We need product living in the environment. e.g. holding the toy, it vibrates, parade happening behind. There are loads of ways to grab B-roll product demo shots.</li>
-        <li>Only 20 posts across a 2-day event, well under where we should be</li>
+        <li>It's almost all pride footage, barely any product in frame. We need product living in the environment — e.g. holding the toy, it vibrates, parade happening behind. There are loads of ways to grab B-roll product demo shots.</li>
+        <li>Only 20 posts across a 2-day event, well under where we should be.</li>
         <li>We didn't ride the moment. The trend dies down quick, so we need to post as much as possible <i>during</i> that weekend, not after. We may need to increase our manpower support on remote editors.</li>
       </ul>
 
-      <h4>What I'd change next time 🔁</h4>
+      <h3>What I'd change next time 🔁</h3>
       <ul>
         <li>🎬 <b>Story-led reels</b> — keep the beautiful pride shots, cut in the B-roll product demo, layer a narrative VO. That's where the strong storytelling comes from.</li>
-        <li>✂️ <b>Divide &amp; conquer on edit</b> — editor support is the bottleneck. Dione and I have been chatting about bringing on freelance PH editors (lower labour cost), all working in Capcut — best template tool for this.</li>
+        <li>✂️ <b>Divide &amp; conquer on edit</b> — editor support is the bottleneck. Dione and I have been chatting about bringing on freelance PH editors (lower labour cost), all working in CapCut — best template tool for this.</li>
         <li>🎁 <b>Gift creators in advance and provide a strong mini site brief</b> — biggest HK learning. Find the micro + nano creators already going to the event, get product to them early, and send expected deliverables + a mini site brief so they know our direction and expectations.</li>
         <li>📋 <b>Plan to realistic shoot time</b> — pick formats we can actually pull off on the day. Street interviews with games, that kind of thing.</li>
       </ul>
-
-      <p>Have a read of the report and let me know your thoughts 🙌</p>
     </div>
   </div>
 </div>
